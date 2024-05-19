@@ -1,0 +1,542 @@
+/* Define as variáveis com cores para o tema escuro */
+[data-theme='dark'] {
+  --main-color: #bd4c50;
+  --background-color: #151515;
+  --background-color2: #333333;
+  --secundary-color: #e8ebe4;
+  --secundary-color2: #afbaa1;
+}
+
+/* Define as variáveis com cores para o tema claro */
+[data-theme='light'] {
+  --main-color: #bd4c50;
+  --background-color: #e8ebe4;
+  --background-color2: #afbaa1;
+  --secundary-color: #151515;
+  --secundary-color2: #333333;
+}
+
+/* Indica para o navegador calcular largura e altura com conteúdo, borda e padding */
+*,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Remove margem padrão de todos os elementos e define a fonte roboto*/
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  z-index: 0;
+}
+
+/* Tamanho de linha 1.5 */
+body {
+  line-height: 1.5;
+}
+
+/* Muda o background da página */
+html {
+  background-color: var(--background-color);
+}
+
+/* Remove toda a estilização de links para evitar cores diferentes ao visitar links, por exemplo */
+a {
+  all: unset;
+}
+
+/* Faz o cursor apontar quando passar por um link */
+a:hover {
+  cursor: pointer;
+}
+
+#navbar {
+  background-color: var(--background-color);
+  width: 100%;
+  flex-direction: column;
+  position: fixed;
+  display: flex;
+  top: 0;
+  align-items: center;
+  padding: 5px;
+  z-index: 999;
+}
+
+#navbar .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#navbar .link {
+  color: var(--secundary-color);
+  padding: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+#navbar .link:hover {
+  color: var(--main-color);
+}
+
+#navbar #theme-button {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  appearance: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--secundary-color);
+}
+
+#navbar #theme-button:before {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.2s ease-in-out;
+  background-color: var(--background-color);
+}
+
+#navbar #theme-button:checked:before {
+  transform: translateX(40px);
+}
+
+#home {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#home .header-text {
+  font-size: 1.25em;
+  color: var(--secundary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#home .header-text span {
+  color: var(--main-color);
+}
+
+#home .button {
+  background-color: var(--background-color);
+  border: 1px solid var(--secundary-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  max-width: 150px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+
+#home .button:hover {
+  background-color: var(--main-color);
+}
+
+#home .image-container {
+  width: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  height: auto;
+}
+
+#home .image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#about {
+  width: 100%;
+  background-color: var(--background-color2);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+#about h1 {
+  color: var(--secundary-color);
+}
+
+#about .about-texts {
+  color: var(--secundary-color);
+  font-size: 1em;
+}
+
+#about .about-texts span {
+  color: var(--main-color);
+}
+
+#skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+#skills h1 {
+  font-size: 2em;
+  color: var(--secundary-color);
+}
+
+#skills h3 {
+  font-size: 1.25em;
+  color: var(--secundary-color);
+}
+
+#skills .tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#skills .tools .tool {
+  width: 48px;
+  padding: 20px;
+  background-color: var(--secundary-color2);
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+#skills .tools .tool:hover {
+  background-color: var(--main-color);
+  scale: 1.05;
+}
+
+#portfolio {
+  width: 100%;
+  background-color: var(--background-color2);
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+#portfolio h1 {
+  color: var(--secundary-color);
+}
+
+#portfolio .projects {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+#portfolio .projects .project {
+  height: 320px;
+  width: 256px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .projects .project .image {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+  transition: 0.2s ease-in-out;
+}
+
+#portfolio .projects .project:hover .image {
+  width: 256px;
+  height: 320px;
+}
+
+.text {
+  position: absolute;
+  top: 180px;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 140px;
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.text h2 {
+  color: var(--main-color);
+}
+
+.text p {
+  color: var(--secundary-color);
+}
+
+.project:hover .text {
+  top: 180px;
+}
+
+#education {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+#education h1 {
+  color: var(--secundary-color);
+}
+
+#education .educations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#education .educations .education {
+  background-color: var(--secundary-color2);
+  width: 320px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+#education .educations .education .date {
+  background-color: var(--background-color2);
+  color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+#education .educations .education .title {
+  color: var(--background-color);
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+#education .educations .education .desc {
+  text-align: center;
+}
+
+#education .educations .education:hover {
+  scale: 1.05;
+}
+
+#education .courses {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+#education .courses .course {
+  background-color: var(--secundary-color2);
+  width: 320px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+#education .courses .course:hover {
+  scale: 1.05;
+}
+
+#education .courses .course .title {
+  background-color: var(--background-color2);
+  color: var(--main-color);
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+#education .courses .course .desc {
+  color: var(--background-color);
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+#education .courses .course .date {
+  text-align: center;
+}
+
+#contact {
+  width: 100%;
+  background-color: var(--background-color2);
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+#contact h1,
+h2 {
+  color: var(--secundary-color);
+}
+
+#contact .socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#contact .socials .social {
+  border-radius: 10px;
+  scale: 1.15;
+  transition: 0.2s ease-in-out;
+}
+
+#contact .socials .social:hover {
+  scale: 1.2;
+}
+
+#contact .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .form-container .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+#contact .form-container .form input,
+#message {
+  width: 300px;
+  height: 50px;
+  background-color: var(--secundary-color);
+  color: var(--background-color);
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+#contact .form-container .form label{
+  font-weight: bold;
+  font-size: 1.25em;
+  color: var(--secundary-color);
+}
+
+#contact .form-container .form #message {
+  height: 200px;
+}
+
+#contact .form-container .form .submit {
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+#contact .form-container .form .submit:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+@media (min-width: 420px) {
+  #navbar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 769px) {
+  #home {
+    padding: 20px 50px;
+  }
+
+  #about {
+    padding: 20px 50px;
+  }
+
+  #portfolio .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #portfolio .projects .project .image {
+    width: 500px;
+    height: 600px;
+  }
+
+  .text {
+    top: 320px;
+  }
+
+  #education .educations .education .date {
+    color: var(--secundary-color);
+    transition: 0.2s ease-in-out;
+  }
+
+  #education .educations .education:hover .date {
+    color: var(--main-color);
+  }
+
+  #education .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #education .courses .course .title {
+    color: var(--secundary-color);
+    transition: 0.2s ease-in-out;
+  }
+
+  #education .courses .course:hover .title {
+    color: var(--main-color);
+  }
+}
+
+@media (min-width: 1024px) {
+  #portfolio .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #education .educations {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #education .courses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #education .courses .course .title {
+    color: var(--secundary-color);
+    transition: 0.2s ease-in-out;
+  }
+
+  #education .courses .course:hover .title {
+    color: var(--main-color);
+  }
+}

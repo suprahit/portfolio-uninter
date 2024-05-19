@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!-- Defini um data-theme para controlar se a página está em modo escuro (dark) ou modo claro (light)-->
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Nogueira</title>
+
+    <!-- Link CSS/Script -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Defer para carregar o script somente após a página ser carregada -->
+    <script src="script.js" defer></script>
+    <!-- Link CSS/Script -->
+
+    <!-- Link Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link Font -->
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <input type="checkbox" id="theme-button" />
+      </div>
+      <div class="links">
+        <a href="#skills" class="link">Skills</a>
+        <a href="#portfolio" class="link">Portfolio</a>
+        <a href="#education" class="link">Formação</a>
+        <a href="#contact" class="link">Contato</a>
+      </div>
+    </div>
+
+    <header id="home">
+      <div class="header-text">
+        <!-- Span para mudar a cor apenas de alguns elementos -->
+        <h1>Me chamo <span>Gabriel Nogueira</span></h1>
+        <h2>Sou um <span>Desenvolvedor Web</span></h2>
+        <!-- Span para mudar a cor apenas de alguns elementos -->
+
+        <a href="#contact" class="button">Contato</a>
+      </div>
+      <div class="image-container">
+        <img src="assets/header-image.png" alt="Minha foto" />
+      </div>
+    </header>
+
+    <section id="about">
+      <h1>Sobre mim</h1>
+      <div class="about-texts">
+        <p>
+          Desenvoledor Web apaixonado por tecnologia e com grande interesse em
+          aprender e desenvolver minhas habilidades na área de programação.
+          Possuo conhecimentos em diversas linguagens e ferramentas, como
+          <span>JavaScript, Java, Python, Rust, MySQL</span>, entre outros.
+        </p>
+        <p>
+          <span>Sou proativo e dedicado</span>. Acredito que a
+          <span>positividade e o entusiasmo</span>
+          são essenciais para o sucesso em qualquer área.
+        </p>
+        <p>
+          No meu tempo livre gosto de conhecer outras linguagens e ferramentas,
+          testar aplicativos, jogar e ouvir música.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h1>Skills</h1>
+      <h3>Linguagens</h3>
+      <div class="tools">
+        <a
+          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+          class="tool"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+          />
+        </a>
+        <a
+          href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+          class="tool"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+          />
+        </a>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+        /></a>
+        <a href="https://www.python.org/" class="tool">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+          />
+        </a>
+        <a href="https://www.java.com/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+        /></a>
+        <a href="https://www.rust-lang.org/" class="tool">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg"
+          />
+        </a>
+      </div>
+      <h3>Frameworks</h3>
+      <div class="tools">
+        <a href="https://react.dev/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+        /></a>
+        <a href="https://nextjs.org/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg"
+        /></a>
+      </div>
+      <h3>Dados</h3>
+      <div class="tools">
+        <a href="https://www.mysql.com/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+        /></a>
+        <a href="https://www.mongodb.com/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+        /></a>
+        <a
+          href="https://www.microsoft.com/pt-br/microsoft-365/excel"
+          class="tool"
+          ><img src="assets/excel_icon.svg"
+        /></a>
+      </div>
+      <h3>IDEs e Editores de Texto</h3>
+      <div class="tools">
+        <a href="https://code.visualstudio.com/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
+        /></a>
+        <a href="https://visualstudio.microsoft.com/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/visualstudio/visualstudio-original.svg"
+        /></a>
+        <a href="https://www.jetbrains.com/pt-br/pycharm/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg"
+        /></a>
+        <a href="https://www.eclipse.org/" class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/eclipse/eclipse-original.svg"
+        /></a>
+      </div>
+      <h3>Sistema Operacional</h3>
+      <div class="tools">
+        <a
+          href="https://www.microsoft.com/pt-br/software-download/windows11"
+          class="tool"
+          ><img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/windows11/windows11-original.svg"
+        /></a>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h1>Meus projetos</h1>
+      <div class="projects">
+        <div class="project">
+          <a href="https://github.com/suprahit/ConversorDeMoedasProjeto">
+            <img
+              class="image"
+              src="assets/conversordemoedasprojeto.png"
+              alt="Projeto Conversor de Moedas Python"
+            />
+            <div class="text">
+              <h2>Conversor de Moedas</h2>
+              <p>
+                Conversor em Python que usa uma API para calcular valores
+                atualizados entre moedas
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/suprahit/ls-clone">
+            <img
+              class="image"
+              src="assets/ls-clone-rust.png"
+              alt="LS Clone Rust"
+            />
+            <div class="text">
+              <h2>LS Clone Rust</h2>
+              <p>
+                Clone do 'ls' do Linux em Rust para listar arquivos e diretórios
+                de forma rápida e eficiente
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/suprahit/Calculator">
+            <img
+              class="image"
+              src="assets/calculator-javascript.png"
+              alt="Calculadora em JavaScript"
+            />
+            <div class="text">
+              <h2>Calculadora em JS</h2>
+              <p>
+                Uma calculadora simples desenvolvida em HTML, CSS e JavaScript
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/suprahit/etch-a-sketch">
+            <img
+              class="image"
+              src="assets/etch-a-sketch-js.png"
+              alt="Calculadora em JavaScript"
+            />
+            <div class="text">
+              <h2>Etch-a-Sketch JS</h2>
+              <p>Um 'Etch A Sketch' virtual em JavaScript, HTML e CSS.</p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/suprahit/landing-page">
+            <img
+              class="image"
+              src="assets/landing-page-html.png"
+              alt="Landing Page HTML/CSS"
+            />
+            <div class="text">
+              <h2>Landing Page HTML/CSS</h2>
+              <p>Uma landing page simples em HTML e CSS.</p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/suprahit/technical-docs">
+            <img
+              class="image"
+              src="assets/technical-doc-tailwind.png"
+              alt="Página documentação Técnica Tailwind CSS"
+            />
+            <div class="text">
+              <h2>Documentação Técnica de Python</h2>
+              <p>Uma página de documentação técnica usando Tailwind CSS.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h1>Minha Formação</h1>
+      <div class="educations">
+        <a
+          href="https://colegiosaopaulofuturo.com.br/portal/"
+          class="education"
+        >
+          <div class="date">2010 - 2018</div>
+          <div class="title">Colégio São Paulo Futuro</div>
+          <div class="desc">Ensino Fundamental</div>
+        </a>
+        <a href="http://eteccamargoaranha.com.br/" class="education">
+          <div class="date">2019 - 2021</div>
+          <div class="title">ETEC Prof. Camargo Aranha</div>
+          <div class="desc">Ensino Médio Regular</div>
+        </a>
+        <a href="https://www.uninter.com/" class="education">
+          <div class="date">2022 - 2025</div>
+          <div class="title">Uninter</div>
+          <div class="desc">Análise e Desenvolvimento de Sistemas</div>
+        </a>
+      </div>
+      <h1>Cursos Livres</h1>
+      <div class="courses">
+        <div class="course">
+          <div class="title">Curso de Algoritmo</div>
+          <div class="desc">Curso em Video</div>
+          <div class="date">12/2017</div>
+        </div>
+        <div class="course">
+          <div class="title">Curso Start</div>
+          <div class="desc">Escola SAGA</div>
+          <div class="date">08/2018</div>
+        </div>
+        <div class="course">
+          <div class="title">App Development</div>
+          <div class="desc">MadCode</div>
+          <div class="date">08/2019</div>
+        </div>
+        <div class="course">
+          <div class="title">Técnicas de Redação</div>
+          <div class="desc">Fundação Bradesco</div>
+          <div class="date">11/2021</div>
+        </div>
+        <div class="course">
+          <div class="title">Lógica de Programação</div>
+          <div class="desc">DIO</div>
+          <div class="date">02/2022</div>
+        </div>
+        <div class="course">
+          <div class="title">Estrutura de Dados e Algoritmos</div>
+          <div class="desc">DIO</div>
+          <div class="date">02/2022</div>
+        </div>
+        <div class="course">
+          <div class="title">
+            Fundamentos de Tecnologia e Atendimento ao Cliente
+          </div>
+          <div class="desc">IBM</div>
+          <div class="date">01/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Desenvolvimento Web</div>
+          <div class="desc">IBM</div>
+          <div class="date">01/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Inovando com CSS</div>
+          <div class="desc">Fundação Bradesco</div>
+          <div class="date">04/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">HTML - Básico</div>
+          <div class="desc">Fundação Bradesco</div>
+          <div class="date">04/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">HTML - Avançado</div>
+          <div class="desc">Fundação Bradesco</div>
+          <div class="date">04/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">HTML, CSS e JavaScript</div>
+          <div class="desc">Fundação Bradesco</div>
+          <div class="date">04/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Responsive Web Design</div>
+          <div class="desc">freeCodeCamp</div>
+          <div class="date">05/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">TypeScript parte 1</div>
+          <div class="desc">Alura</div>
+          <div class="date">06/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">MongoDB</div>
+          <div class="desc">Alura</div>
+          <div class="date">06/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Scrum</div>
+          <div class="desc">Alura</div>
+          <div class="date">08/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Excel</div>
+          <div class="desc">Alura</div>
+          <div class="date">09/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Agile Explorer</div>
+          <div class="desc">IBM</div>
+          <div class="date">08/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Fundamentos</div>
+          <div class="desc">Google</div>
+          <div class="date">12/2023</div>
+        </div>
+        <div class="course">
+          <div class="title">Tomar decisões com base em dados</div>
+          <div class="desc">Google</div>
+          <div class="date">12/2023</div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <h1>Contato</h1>
+      <div class="socials">
+        <a href="mailto:gabrielnogueirar54@gmail.com" class="social">
+          <img
+            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+          />
+        </a>
+        <a href="https://wa.me/5511951965867" class="social">
+          <img
+            src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gabriel-nogueira-ribeiro-256a51206/"
+          class="social"
+          ><img
+            src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+        /></a>
+        <a href="https://discordapp.com/users/suprahit" class="social">
+          <img
+            src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
+          />
+        </a>
+      </div>
+      <h2>Entre em contato comigo!</h2>
+      <div class="form-container">
+        <form class="form">
+          <label for="name"">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Seu nome.." />
+
+          <label for="subject">Assunto</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Assunto.."
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@email.com"
+          />
+          <label for="message">Digite sua mensagem</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Sua mensagem.."
+          ></textarea>
+
+          <input class="submit" type="submit" value="Enviar" />
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
