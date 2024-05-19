@@ -16,6 +16,8 @@
   --secundary-color2: #333333;
 }
 
+/* É utilizado data-theme, no elemento html, para definir qual das variáveis de cores serão usadas, assim, mudando o código entre claro e escuro */
+
 /* Indica para o navegador calcular largura e altura com conteúdo, borda e padding */
 *,
 *::before {
@@ -36,6 +38,7 @@ body {
 
 /* Muda o background da página */
 html {
+  /* Uso de variáveis para modo claro e escuro */
   background-color: var(--background-color);
 }
 
@@ -49,6 +52,8 @@ a:hover {
   cursor: pointer;
 }
 
+/* Coloca a navbar fixa acima de todos os elementos, configura ela para coluna (mobile-first)
+Define cor de fundo, e alinha os itens ao centro */
 #navbar {
   background-color: var(--background-color);
   width: 100%;
@@ -61,6 +66,7 @@ a:hover {
   z-index: 999;
 }
 
+/* Centraliza os links da navbar e deixa o espaço entre eles em 20px */
 #navbar .links {
   display: flex;
   align-items: center;
@@ -68,16 +74,21 @@ a:hover {
   gap: 20px;
 }
 
+/* Define a cor dos links, coloca um preenchimento e ativa uma transição em caso de mudança */
 #navbar .link {
   color: var(--secundary-color);
   padding: 5px;
   transition: 0.2s ease-in-out;
 }
 
+/* Muda a cor do link ao passar o mouse por cima */
 #navbar .link:hover {
   color: var(--main-color);
 }
 
+/* Cria o fundo do botão de tema
+Usa posição relativa para que a posição do círculo do botão de tema seja calculada a partir do próprio fundo
+Remove a aparência de checkbox e transforma em ponteiro ao passar o mouse por cima */
 #navbar #theme-button {
   width: 80px;
   height: 40px;
@@ -88,6 +99,11 @@ a:hover {
   background-color: var(--secundary-color);
 }
 
+/* Define o ::before do botão de tema como o círculo interno do botão
+Posição absoluta para que fique posicionado acima do fundo
+O conteúdo fica definido vazio
+Arredonda para ficar um círculo
+Adiciona um pequeno espaço entre o círculo e as bordas do fundo */
 #navbar #theme-button:before {
   content: '';
   position: absolute;
@@ -100,10 +116,15 @@ a:hover {
   background-color: var(--background-color);
 }
 
+/* Movimenta o círculo interno para o outro lado ao ativar o input de checkbox */
 #navbar #theme-button:checked:before {
   transform: translateX(40px);
 }
 
+/* Define a largura do header principal
+Coloca a uma distância de 100px do topo para dar um espaço para a navbar fixa
+Justifica e alinha os itens ao centro, mantendo um espaço de 20px entre eles
+Adiciona preenchimento vertical de 20px e lateral de 5px */
 #home {
   width: 100%;
   margin-top: 100px;
@@ -111,9 +132,11 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px 10px;
+  padding: 20px 5px;
 }
 
+/* Define o tamanho e a cor dos textos do header principal
+Coloca os textos em coluna e deixa um espaço de 20px entre eles */
 #home .header-text {
   font-size: 1.25em;
   color: var(--secundary-color);
@@ -122,10 +145,16 @@ a:hover {
   gap: 20px;
 }
 
+/* Muda a cor do texto que está entre as tags span do header principal */
 #home .header-text span {
   color: var(--main-color);
 }
 
+/* Configura o botão do header principal
+Define cor de fundo, borda, preenchimento, largura máxima
+Deixa o cursor como ponteiro ao passar o mouse em cima
+Adiciona uma transição para mudanças e remove as decorações de texto
+(o botão do header principal é um link, por isso, remover as decorações de texto) */
 #home .button {
   background-color: var(--background-color);
   border: 1px solid var(--secundary-color);
@@ -138,10 +167,13 @@ a:hover {
   text-decoration: none;
 }
 
+/* Muda a cor do botão ao passar o mouse por cima */
 #home .button:hover {
   background-color: var(--main-color);
 }
 
+/* Arredonda as bordas do container imagem, tornando um círculo
+Esconde qualquer parte da imagem que sair do container */
 #home .image-container {
   width: 400px;
   overflow: hidden;
@@ -150,11 +182,17 @@ a:hover {
   height: auto;
 }
 
+/* Permite que partes da imagem sejam cobertas
+Define a imagem com o tamanho do container */
 #home .image-container img {
   width: 100%;
   object-fit: cover;
 }
 
+/* Faz que a área sobre mim tenha largura da tela inteira
+Adiciona uma margem superior, para espaçar entre o header e o sobre mim
+Alinha e justifica no centro os elementos, em uma coluna
+Adiciona preenchimento vertical de 20px e lateral de 5px */
 #about {
   width: 100%;
   background-color: var(--background-color2);
@@ -163,22 +201,29 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 5px;
 }
 
+/* Muda a cor dos títulos do sobre mim */
 #about h1 {
   color: var(--secundary-color);
 }
 
+/* Muda a cor dos textos do sobre mim*/
 #about .about-texts {
   color: var(--secundary-color);
   font-size: 1em;
 }
 
+/* Muda a cor de apenas algumas partes dos textos de sobre mim, que estão dentro das tags span */
 #about .about-texts span {
   color: var(--main-color);
 }
 
+/* A área de habilidades terá largura máxima da tela
+Alinha e justifica ao centro os elementos em uma coluna
+Espaça os elementos em 20 pixels 
+Adiciona um preenchimento vertical de 20px */
 #skills {
   width: 100%;
   display: flex;
@@ -189,16 +234,20 @@ a:hover {
   padding: 20px 0px;
 }
 
+/* Define o tamanho dos títulos e a cor da área de skills */
 #skills h1 {
   font-size: 2em;
   color: var(--secundary-color);
 }
 
+/* Define o tamanho e a cor dos subtítulos da área de skills */
 #skills h3 {
   font-size: 1.25em;
   color: var(--secundary-color);
 }
 
+/* Alinha e justifica as ferramentas da área de skills no centro de uma linha, com um espaço de 20px
+Caso as ferramentas alcancem a borda da tela, elas irão para a próxima linha (flex-wrap)*/
 #skills .tools {
   display: flex;
   justify-content: center;
@@ -207,6 +256,9 @@ a:hover {
   flex-wrap: wrap;
 }
 
+/* Define o tamanho máximo das ferramentas
+Adiciona um preenchimento e define a cor de fundo
+Arredonda as bordas e adiciona uma transição para mudança */
 #skills .tools .tool {
   width: 48px;
   padding: 20px;
@@ -215,11 +267,19 @@ a:hover {
   transition: 0.2s ease-in-out;
 }
 
+/* Ao passar o mouse em cima, muda a cor de fundo da ferramenta
+Aumenta o tamanho da ferramenta em 5% */
 #skills .tools .tool:hover {
   background-color: var(--main-color);
   scale: 1.05;
 }
 
+/* Define a largura do portfolio para tela inteira
+Define a cor de fundo
+Adiciona uma margem superior
+Alinha e justifica os elementos do portfolio no centro de uma coluna
+Adiciona um espaçamento entre eles de 20px
+Adiciona um padding vertical de 20px*/
 #portfolio {
   width: 100%;
   background-color: var(--background-color2);
@@ -232,10 +292,13 @@ a:hover {
   padding: 20px 0px;
 }
 
+/* Adiciona cor aos títulos da área de portfólio */
 #portfolio h1 {
   color: var(--secundary-color);
 }
 
+/* Coloca os projetos em uma grade (1 unica coluna para modo mobile)
+com espaço de 20px entre os projetos */
 #portfolio .projects {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -243,6 +306,8 @@ a:hover {
   grid-row-gap: 20px;
 }
 
+/* Define a largura e altura máxima do projeto
+Arredonda as bordas e esconde o que sair para fora do projeto */
 #portfolio .projects .project {
   height: 320px;
   width: 256px;
@@ -251,18 +316,16 @@ a:hover {
   overflow: hidden;
 }
 
+/* Define o tamanho de imagem, permite que ela seja coberta e adiciona uma transição para animação */
 #portfolio .projects .project .image {
-  width: 500px;
-  height: 600px;
+  width: 256px;
+  height: 320px;
   object-fit: cover;
   transition: 0.2s ease-in-out;
 }
 
-#portfolio .projects .project:hover .image {
-  width: 256px;
-  height: 320px;
-}
-
+/* Posiciona o texto do projeto acima da imagem
+Define cor de fundo, largura e altura pro texto */
 .text {
   position: absolute;
   top: 180px;
@@ -273,18 +336,19 @@ a:hover {
   transition: 0.2s ease-in-out;
 }
 
+/* Define a cor pro título do texto */
 .text h2 {
   color: var(--main-color);
 }
 
+/* Define a cor para o parágrafo do texto */
 .text p {
   color: var(--secundary-color);
 }
 
-.project:hover .text {
-  top: 180px;
-}
-
+/* Define a largura de 100% para a área de educação
+Justifica e alinha os itens ao centro de uma coluna, com um espaçamento de 20px
+Adiciona um preenchimento de 20px vertical */
 #education {
   width: 100%;
   display: flex;
@@ -295,10 +359,12 @@ a:hover {
   padding: 20px 0px;
 }
 
+/* Define a cor do título da área de educação */
 #education h1 {
   color: var(--secundary-color);
 }
 
+/* Alinha e justifica as educações no centro de uma coluna, com espaçamento de 20px */
 #education .educations {
   display: flex;
   flex-direction: column;
@@ -307,6 +373,9 @@ a:hover {
   gap: 20px;
 }
 
+/* Define largura e altura máxima para cada card de educação
+Justifica e alinha os itens do card no centro de uma coluna com um espaçamento de 10px entre cada
+Arredonda as bordas e adiciona transição para animação */
 #education .educations .education {
   background-color: var(--secundary-color2);
   width: 320px;
@@ -320,6 +389,12 @@ a:hover {
   transition: 0.2s ease-in-out;
 }
 
+/* Define cor do fundo para a data da educação
+Define cor para o texto
+Adiciona um pequeno preenchimento
+Arredonda as bordas
+Define tamanho da fonte
+E deixa o texto em negrito */
 #education .educations .education .date {
   background-color: var(--background-color2);
   color: var(--main-color);
@@ -329,27 +404,37 @@ a:hover {
   font-weight: bolder;
 }
 
+/* Deixa o texto do título em negrito, com uma fonte um pouco menor que a data
+E define a cor */
 #education .educations .education .title {
   color: var(--background-color);
   font-size: 1.15em;
   font-weight: bold;
 }
 
+/* Alinha a descrição do card ao centro e define a cor do texto */
 #education .educations .education .desc {
   text-align: center;
   color: var(--background-color);
 }
 
+/* Ao passar o mouse, o card de educação aumentará em 5% */
 #education .educations .education:hover {
   scale: 1.05;
 }
 
+/* Define uma grade para os cursos de 1 coluna (mobile-first) com um espaço de 20px */
 #education .courses {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
+/* Define o tamanho do card de cursos
+A cor de fundo
+Justifica e alinha os elementos do card no centro de uma coluna
+Adiciona um espaçamento entre os elementos de 10 pixels
+Arredonda a borda e adiciona uma transição para animação */
 #education .courses .course {
   background-color: var(--secundary-color2);
   width: 320px;
@@ -363,10 +448,15 @@ a:hover {
   transition: 0.2s ease-in-out;
 }
 
+/* Ao passar o mouse em cima do card de curso, aumenta o tamanho em 5% */
 #education .courses .course:hover {
   scale: 1.05;
 }
 
+/* Define cor de fundo e do texto do título do card
+Adiciona um pequeno preenchimento
+Arredonda as bordas
+Define o tamanho do título e deixa em negrito */
 #education .courses .course .title {
   background-color: var(--background-color2);
   color: var(--main-color);
@@ -376,17 +466,24 @@ a:hover {
   font-weight: bolder;
 }
 
+/* Define o tamanho e cor da descrição do card e deixa o texto em negrito */
 #education .courses .course .desc {
   color: var(--background-color);
   font-size: 1.15em;
   font-weight: bold;
 }
 
+/* Alinha a data do card ao centro e define cor */
 #education .courses .course .date {
   text-align: center;
   color: var(--background-color);
 }
 
+/* Define largura de 100% para a área de contato
+Define cor de fundo, adiciona uma margem de 20px ao topo
+Alinha e justifica os elementos da área de contato ao centro de uma coluna
+Adiciona um espaçamento entre eles de 20px
+Adiciona um preenchimento de 20px vertical */
 #contact {
   width: 100%;
   background-color: var(--background-color2);
@@ -399,11 +496,15 @@ a:hover {
   padding: 20px 0px;
 }
 
+/* Define cor para os títulos e subtítulos da área de contato */
 #contact h1,
 h2 {
   color: var(--secundary-color);
 }
 
+/* Justifica e alinha as redes sociais no centro de uma linha
+Adiciona espaçamento entre eles
+Caso passe da borda da tela, irá para a próxima linha */
 #contact .socials {
   display: flex;
   flex-wrap: wrap;
@@ -412,22 +513,27 @@ h2 {
   gap: 20px;
 }
 
+/* Aumenta o tamanho padrão do ícone de rede social
+Arredonda a borda e adiciona uma transição para animação */
 #contact .socials .social {
   border-radius: 10px;
   scale: 1.15;
   transition: 0.2s ease-in-out;
 }
 
+/* Ao passar o mouse em cima, o ícone de rede social aumentará em 5%*/
 #contact .socials .social:hover {
   scale: 1.2;
 }
 
+/* Justifica e alinha os elementos do container de formulário ao centro */
 #contact .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Justifica os elementos do formulário ao centro e coloca um espaço de 10 px entre eles */
 #contact .form-container .form {
   display: flex;
   flex-direction: column;
@@ -435,6 +541,9 @@ h2 {
   gap: 10px;
 }
 
+/* Define largura e altura das caixas de input e texto do formulário
+Define cor de fundo, cor e tamanho do texto
+Adiciona uma margem inferior em cada um deles */
 #contact .form-container .form input,
 #message {
   width: 300px;
@@ -445,34 +554,43 @@ h2 {
   margin-bottom: 30px;
 }
 
+/* Deixa as descrições das caixas de input em negrito, além de definir cor e tamanho */
 #contact .form-container .form label {
   font-weight: bold;
   font-size: 1.25em;
   color: var(--secundary-color);
 }
 
+/* Define a altura padrão da caixa de texto */
 #contact .form-container .form #message {
   height: 200px;
 }
 
+/* Arredonda a borda do botão de enviar e adiciona uma transição para animação 
+Faz o cursor virar ponteiro ao passar o mouse em cima */
 #contact .form-container .form .submit {
   border-radius: 10px;
+  cursor: pointer;
   transition: 0.2s ease-in-out;
 }
 
+/* Ao passar o mouse em cima do botão de envio, aumenta o tamanho em 5%  */
 #contact .form-container .form .submit:hover {
-  cursor: pointer;
   scale: 1.05;
 }
 
+/* Se a tela tiver uma largura mínima de 420px */
 @media (min-width: 420px) {
+  /* coloca a navbar em uma linha, ao invés de coluna */
   #navbar {
     flex-direction: row;
     justify-content: space-around;
   }
 }
 
+/* Se a tela tiver uma largura mínima de 769px */
 @media (min-width: 769px) {
+  /* Adiciona um preenchimento maior no header inicial e no sobre mim */
   #home {
     padding: 20px 50px;
   }
@@ -481,19 +599,33 @@ h2 {
     padding: 20px 50px;
   }
 
+  /* Faz a grade dos projetos ter 2 colunas, ao invés de 1 */
   #portfolio .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Faz a imagem dos projetos ficarem maior e ao passar o mouse em cima, ou segurar com o dedo,
+  diminuir de tamanho */
   #portfolio .projects .project .image {
     width: 500px;
     height: 600px;
   }
 
+  #portfolio .projects .project:hover .image {
+    width: 256px;
+    height: 320px;
+  }
+
+  /* Faz o texto dos projetos ficar oculto até passar o mouse em cima, ou segurar o dedo */
   .text {
     top: 320px;
   }
 
+  .project:hover .text {
+    top: 180px;
+  }
+
+  /* Muda a cor da data do card de educação para branco e ao passar o mouse em cima ficará avermelhado */
   #education .educations .education .date {
     color: var(--secundary-color);
     transition: 0.2s ease-in-out;
@@ -503,10 +635,12 @@ h2 {
     color: var(--main-color);
   }
 
+  /* Aumenta o tamanho da grade de cursos para 2, ao invés de 1 */
   #education .courses {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Faz o título de curso ficar branco e ao passar o mouse em cima, ficará avermelhado */
   #education .courses .course .title {
     color: var(--secundary-color);
     transition: 0.2s ease-in-out;
@@ -517,7 +651,9 @@ h2 {
   }
 }
 
+/* Se a tela tiver pelo menos 1024px de largura */
 @media (min-width: 1024px) {
+  /* Adiciona um padding lateral ainda maior ao header inicial e sobre mim */
   #home {
     padding: 20px 100px;
   }
@@ -526,10 +662,12 @@ h2 {
     padding: 20px 100px;
   }
 
+  /* Faz a grade de projetos ter 3 colunas, ao invés de 2 */
   #portfolio .projects {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Faz os cards de educação ficarem em uma linha, ao invés de coluna */
   #education .educations {
     display: flex;
     justify-content: center;
@@ -538,10 +676,12 @@ h2 {
     gap: 20px;
   }
 
+  /* Faz a grade de cursos ter 3 colunas, ao invés de 2 */
   #education .courses {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Faz o título do card de curso ficar branco até passar o mouse em cima, ficando avermelhado */
   #education .courses .course .title {
     color: var(--secundary-color);
     transition: 0.2s ease-in-out;
@@ -552,7 +692,9 @@ h2 {
   }
 }
 
+/* Se a tela tiver no mínimo 1250px */
 @media (min-width: 1250px) {
+  /* Adiciona um padding lateral ainda maior nas áreas de sobre mim e header inicial */
   #home {
     padding: 20px 150px;
   }

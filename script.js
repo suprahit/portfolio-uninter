@@ -1,7 +1,7 @@
 // Seleciona o botão de tema
 const themeButton = document.querySelector('#theme-button');
 
-// Função que atualiza o botão de tema, salva a opção no navegador e atualiza o documento HTML
+// Função que atualiza o botão de tema, salva a opção no navegador e atualiza o documento HTML para o tema correto
 function updateTheme(theme) {
   localStorage.setItem('theme', theme);
   document.querySelector('html').setAttribute('data-theme', theme);
@@ -23,7 +23,7 @@ if (localStorage.getItem('theme') == 'dark') {
   updateTheme('light');
 }
 
-// Detecta clicks no botão de tema
+// Detecta clicks no botão de tema, atualizando para o tema certo
 themeButton.addEventListener('change', () => {
   if (themeButton.checked) {
     updateTheme('light');
