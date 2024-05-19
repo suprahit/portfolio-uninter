@@ -111,6 +111,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 20px 10px;
 }
 
 #home .header-text {
@@ -162,7 +163,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  padding: 20px 10px;
 }
 
 #about h1 {
@@ -336,6 +337,7 @@ a:hover {
 
 #education .educations .education .desc {
   text-align: center;
+  color: var(--background-color);
 }
 
 #education .educations .education:hover {
@@ -382,6 +384,7 @@ a:hover {
 
 #education .courses .course .date {
   text-align: center;
+  color: var(--background-color);
 }
 
 #contact {
@@ -442,7 +445,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-#contact .form-container .form label{
+#contact .form-container .form label {
   font-weight: bold;
   font-size: 1.25em;
   color: var(--secundary-color);
@@ -515,6 +518,14 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+  #home {
+    padding: 20px 100px;
+  }
+
+  #about {
+    padding: 20px 100px;
+  }
+
   #portfolio .projects {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -538,5 +549,15 @@ h2 {
 
   #education .courses .course:hover .title {
     color: var(--main-color);
+  }
+}
+
+@media (min-width: 1250px) {
+  #home {
+    padding: 20px 150px;
+  }
+
+  #about {
+    padding: 20px 150px;
   }
 }
